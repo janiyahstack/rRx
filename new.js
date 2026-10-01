@@ -1,5 +1,8 @@
+import express from "express";
 import { ApifyClient } from "apify-client";
 import "dotenv/config";
+const app = express();
+app.use(express.json());
 const client = new ApifyClient({
     token: process.env.APIFY_API_TOKEN,
 });
